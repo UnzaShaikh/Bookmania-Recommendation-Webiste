@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Book Mania</title>
+     <!-- boxicons link -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}" />
+
+</head>
+<body>
+    <!-- Header -->
+<header class="header">
+  <nav class="nav">
+    <a href="#" class="nav_logo">Book Mania</a>
+    <ul class="nav_items">
+      <li class="nav_item">
+        <a href="{{ url_for('index') }}" class="nav_link">Home</a>
+         <a href="{{ url_for('shop') }}" class="nav_link">Shop</a>
+          <a href="{{ url_for('about') }}" class="nav_link">About Us</a>
+       <a href="{{ url_for('contact') }}" class="nav_link">Contact</a>
+        <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">Profile</button>
+            <div id="myDropdown" class="dropdown-content">
+            <a href="/profile">My Profile</a>
+            <a href="#">Settings</a>
+            <a href="/logout">Logout</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+      <form action="/search" method="POST" class="search-form">
+                <input type="text" name="search_query" id="search_query" placeholder="Search for books by title, author, or keywords">
+               <datalist id="keywords">
+        <!-- Suggestions will be added dynamically using JavaScript -->
+    </datalist>
+                <button type="submit">Search</button>
+            </form>
+
+
+  </nav>
+</header>
+
+    <h1 id="username" class="front">Welcome, {{ username }}!</h1><br>
+
+   <!-- Popular Books Section -->
+   <h2 class="top">Top Popular Books</h2>
+<div class="book-container">
+    {% for index, book in popular_books.iterrows() %}
+    <div class="book">
+        <img src="{{ book['Image-URL'] }}" alt="Book Cover">
+        <div class="book-details">
+            <h3>{{ book['Book-Title'] }}</h3> <br>
+            <p>Author: {{ book['Author-Name'] }}</p><br>
+           <div class="rating">
+               <p class="rating-value">Ratings:{{ book['Ratings'] }}</p>
+               <span class="stars"></span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+    <!-- Recommendation section -->
+<div class="recommended-books">
+    <h2>Recommended Books</h2>
+    <div class="recommended-slider">
+        <!-- Slider Controls -->
+        <div class="slider-content">
+            <div class="recommended-books-container">
+                {% for index, book in recommendations.iterrows() %}
+                <div class="recommended-book">
+                    <img src="{{ book['Image-URL'] }}" alt="Book Cover">
+                    <h3 class="title">{{ book['Book-Title'] }}</h3>
+                    <p class="author">Author: {{ book['Author-Name'] }}</p>
+                    <div class="ratings">
+                        {% set rating = book['Ratings'] %}
+                        {% for i in range(5) %}
+                            <span class="star {% if i < rating %}filled{% endif %}">&#9733;</span>
+                        {% endfor %}
+                    </div>
+                    <p class="price">Price: ${{ generateRandomPrice() }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+     <div class="slider-controls">
+            <button id="prev-recommended-btn">Previous</button>
+            <button id="next-recommended-btn">Next</button>
+        </div>
+</div>
+
+
+ <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul class="links">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+             <li><a href="{{ url_for('shop') }}">Shop</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="#">Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="links">
+                  <li><a href="#">AI</a></li>
+            <li><a href="#">ML</a></li>
+            <li><a href="#">Cyber Security</a></li>
+            <li><a href="#">Data Science</a></li>
+            <li><a href="#">Cloud Computing</a></li>
+            <li><a href="#">Fiction</a></li>
+            <li><a href="#">New Uploads</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required>
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='welcome.js') }}"></script>
+<script src="{{ url_for('static', filename='search_results.js') }}"></script>
+</body>
+</html>

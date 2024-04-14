@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile Page</title>
+
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
+
+body {
+
+    background-repeat: no-repeat;
+  background-size: cover;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cambo', serif;
+}
+a {
+  text-decoration: none;
+}
+  .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+             max-width: 1100px;
+              margin: 10 auto;
+               display: flex;
+              height: 100%;
+
+        }
+
+        .nav_logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav_items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav_item {
+            margin-left: 10px;
+             display: flex;
+              height: 100%;
+              align-items: center;
+              justify-content: space-between;
+        }
+
+        .nav_link {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+ .nav_link:hover {
+  color: brown;
+}
+
+<!--profile form css -->
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cambo', serif;
+    background-size: cover;
+    background-color: #f5f5f5;
+}
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    top:20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Different label colors for various fields */
+label[for="first-name"] {
+    color: #007bff; /* Blue color for First Name */
+}
+
+label[for="last-name"] {
+    color: #ff6b6b; /* Red color for Last Name */
+}
+
+label[for="username"] {
+    color: #40ad52; /* Green color for Username */
+}
+
+label[for="password"] {
+    color: #f7b500; /* Yellow color for Password */
+}
+
+label[for="email"] {
+    color: #aa80ff; /* Purple color for Email */
+}
+
+label[for="phone-number"] {
+    color: #ff8c00; /* Orange color for Phone Number */
+}
+
+label[for="country"] {
+    color: #4caf50; /* Dark Green color for Country */
+}
+
+label[for="home-address"] {
+    color: #e91e63; /* Pink color for Home Address */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #007bff; /* Blue color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff; /* Blue color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover,
+.custom-file-upload:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.editable {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff; /* Blue color for editable text */
+}
+
+.editable:hover {
+    text-decoration: underline;
+}
+
+/* Style for the search bar */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Add margin to the right of the text field */
+}
+
+.search-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 90px;
+}
+
+/* Importing Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background: #10182F;
+  border-radius: 6px;
+  margin-bottom: 100px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: white;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+
+</style>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav_logo">Book Mania</a>
+        <ul class="nav_items">
+          <li class="nav_item">
+           <a href="{{ url_for('index') }}" class="nav_link">Home</a>
+              <a href="{{ url_for('shop') }}" class="nav_link">Shop</a>
+              <a href="{{ url_for('about') }}" class="nav_link">About Us</a>
+          <a href="{{ url_for('contact') }}" class="nav_link">Contact</a>
+          </li>
+        </ul>
+         <form action="/search" method="POST" class="search-form">
+                <input type="text" name="search_query" id="search_query" placeholder="Search for books by title, author, or keywords">
+             <datalist id="keywords">
+        <!-- Suggestions will be added dynamically using JavaScript -->
+    </datalist>
+                <button type="submit">Search</button>
+            </form>
+
+      </nav>
+
+    </header>
+
+<h1>Personal Details</h1>
+<div class="container">
+        <form id="profile-form" action="/profile" method="POST" enctype="multipart/form-data">
+        <input type="hidden" id="user-id" value="{{ user['id'] }}">
+
+<label for="first-name">First Name:</label>
+<input type="text" id="first-name" name="first-name" value="{{ user_profile['first_name'] if user_profile and 'first_name' in user_profile else '' }}" contenteditable="true">
+
+           <label for="last-name">Last Name:</label>
+<input type="text" id="last-name" name="last-name" value="{{ user_profile['last_name'] if user_profile and 'last_name' in user_profile else '' }}" contenteditable="true">
+
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" value="{{ user_profile['username'] }}" required contenteditable="true">
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" value="{{user_profile['password'] }}" required contenteditable="true">
+
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email" value="{{ user_profile['email'] }}" required contenteditable="true">
+
+
+            <label for="phone-number">Phone Number:</label>
+<input type="text" id="phone-number" name="phone-number" value="{{ user_profile['phone_number'] if user_profile and 'phone_number' in user_profile else '' }}" required contenteditable="true">
+
+            <label for="country">Country:</label>
+<select id="country" name="country" contenteditable="true">
+    <option value="us" {% if user_profile and user_profile['country'] == 'us' %}selected{% endif %}>United States</option>
+    <option value="uk" {% if user_profile and user_profile['country'] == 'uk' %}selected{% endif %}>United Kingdom</option>
+    <option value="ca" {% if user_profile and user_profile['country'] == 'ca' %}selected{% endif %}>Canada</option>
+    <option value="pak" {% if user_profile and user_profile['country'] == 'pak' %}selected{% endif %}>Pakistan</option>
+    <option value="ind" {% if user_profile and user_profile['country'] == 'ind' %}selected{% endif %}>Inida</option>
+    <!-- Add more options as needed -->
+</select>
+
+           <label for="home-address">Home Address:</label>
+<textarea id="home-address" name="home-address" contenteditable="true">{{ user_profile['home_address'] if user_profile and 'home_address' in user_profile else '' }}</textarea>
+
+             <button type="button" id="save-btn">Save</button>
+        </form>
+
+    </div>
+<!--footer section-->
+      <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul class="links">
+           <li><a href="{{ url_for('index') }}">Home</a></li>
+             <li><a href="{{ url_for('shop') }}">Shop</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="#">Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="links">
+            <li><a href="#">AI</a></li>
+            <li><a href="#">ML</a></li>
+            <li><a href="#">Cyber Security</a></li>
+            <li><a href="#">Data Science</a></li>
+            <li><a href="#">Cloud Computing</a></li>
+            <li><a href="#">Fiction</a></li>
+            <li><a href="#">New Uploads</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required>
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script src="{{ url_for('static', filename='profile.js') }}"></script>
+<script src="{{ url_for('static', filename='search_results.js') }}"></script>
+</body>
+
+</html>

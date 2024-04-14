@@ -1,0 +1,470 @@
+
+    /* popular books css*/
+ .top {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 30px;
+        weight: bold;
+    }
+
+    .book-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+          background: linear-gradient(to right, #bbd2c5, #536976);
+    }
+    .book-wrapper {
+        width: 220px;
+        margin-right: 20px;
+    }
+    .book {
+        width: 200px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .book:hover{
+        transform: translateY(-5px);
+    }
+
+.bookheading{
+      background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .book img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }
+
+    .book-details h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .book-details p {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: black;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+    }
+
+    .rating-value {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    .stars {
+        font-size: 16px;
+        color: #ffc107;
+    }
+
+    .stars::before {
+        content: "\2605\2605\2605\2605\2605";
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        width: 80px;
+        letter-spacing: 1px;
+    }
+
+    .stars:hover::before {
+        content: "\2605\2605\2605\2605\2605";
+    }
+
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Cambo', serif;
+
+        }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cambo', serif;
+}
+
+       .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+             max-width: 1100px;
+              margin: 10 auto;
+               display: flex;
+              height: 100%;
+
+        }
+
+        .nav_logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav_items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav_item {
+            margin-left: 10px;
+             display: flex;
+              height: 100%;
+              align-items: center;
+              justify-content: space-between;
+        }
+
+        .nav_link {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .front {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 24px;
+        }
+
+.nav_link:hover {
+  color: brown;
+}
+
+#username {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: small;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* Style for the search bar */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Add margin to the right of the text field */
+}
+
+.search-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 90px;
+}
+
+
+/* footer section style*/
+
+/* Importing Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cambo', serif;
+}
+
+.footer {
+  position: absolute;
+  top: 520%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background: #10182F;
+  border-radius: 6px;
+  margin-bottom: 100px;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+
+/* Recommended Books Section */
+.recommended-books {
+    margin: 20px;
+    text-align: center;
+}
+
+.recommended-books h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; /* Text color for the section title */
+}
+
+.recommended-slider {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0; /* Add padding for better spacing */
+}
+
+.slider-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.recommended-books-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent books from wrapping to the next line */
+    transition: transform 0.3s ease;
+}
+
+.recommended-book {
+       background: linear-gradient(to right, #bbd2c5, #536976);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin-right: 10px; /* Add space between recommended books */
+    text-align: center;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Hide content that overflows */
+    display: flex;
+    flex-direction: column;
+}
+
+.recommended-book img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    flex-grow: 1; /* Allow the image to grow and take available space */
+}
+
+.recommended-book h3.title {
+    font-size: 18px;
+    color: #333; /* Text color for book title */
+    margin: 10px 0;
+    flex-shrink: 0; /* Prevent book title from shrinking */
+}
+
+.recommended-book p.author {
+    font-size: 19px;
+    color: #2C5364;
+    margin: 5px 0;
+    flex-shrink: 0;
+}
+
+.ratings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.star {
+    color: #f77f00; /* Color for unfilled star */
+    font-size: 24px;
+    margin-right: 3px; /* Spacing between stars */
+}
+
+.filled {
+    color: #ffcc00; /* Color for filled star */
+}
+
+.recommended-book p.price {
+    font-size: 16px;
+    color: #666; /* Text color for price */
+    margin: 5px 0;
+    flex-shrink: 0; /* Prevent price from shrinking */
+}
+
+/* Animation for Slideshow */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+.slider-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.slider-controls button {
+    font-family: 'Cambo', serif;
+    background-color: #314755;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: #3b8d99;
+}
+

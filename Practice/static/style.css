@@ -1,0 +1,436 @@
+/* Import Google font - Cambo */
+
+  @import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
+
+body {
+    background-repeat: no-repeat;
+  background-size: cover;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cambo', serif;
+}
+a {
+  text-decoration: none;
+}
+  .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+             max-width: 1100px;
+              margin: 10 auto;
+               display: flex;
+              height: 100%;
+
+        }
+
+        .nav_logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav_items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav_item {
+            margin-left: 10px;
+             display: flex;
+              height: 100%;
+              align-items: center;
+              justify-content: space-between;
+        }
+
+        .nav_link:hover {
+  color: brown;
+}
+
+        .nav_link {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+
+.button {
+  color: #fff;
+}
+
+.button {
+  padding: 6px 24px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Home */
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+.home.show::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* From */
+.form_container {
+  position: fixed;
+  max-width: 320px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 101;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-out;
+}
+.home.show .form_container {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.signup_form {
+  display: none;
+}
+.form_container.active .signup_form {
+  display: block;
+}
+.form_container.active .login_form {
+  display: none;
+}
+.form_close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #0b0217;
+  font-size: 22px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.form_container h2 {
+  font-size: 22px;
+  color: #0b0217;
+  text-align: center;
+}
+.input_box {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+.input_box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  color: #333;
+  transition: all 0.2s ease;
+  border-bottom: 1.5px solid #aaaaaa;
+}
+.input_box input:focus {
+  border-color: #7d2ae8;
+}
+.input_box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #707070;
+}
+.input_box i.email,
+.input_box i.username,
+.input_box i.password {
+  left: 0;
+}
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.username,
+.input_box input:focus ~ i.password {
+  color: #7d2ae8;
+}
+.input_box i.pw_hide {
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+.option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form_container a {
+  color: #7d2ae8;
+  font-size: 12px;
+}
+.form_container a:hover {
+  text-decoration: underline;
+}
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+}
+.checkbox input {
+  accent-color: #7d2ae8;
+}
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+  color: #0b0217;
+}
+.form_container .button {
+  background: #7d2ae8;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.login_signup {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Welcome page css*/
+
+.front h1,p {
+  font-size: 20px;
+  text-decoration: none;
+  margin-top: 900px;
+  text-align:center;
+  color: #FFC0CB;
+   display: inline-block;
+}
+/* Style for the search bar */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Add margin to the right of the text field */
+}
+
+.search-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 90px;
+}
+/* popular books css*/
+ .popular-books {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 30px;
+        weight: bold;
+    }
+
+    .book-container {
+       background: linear-gradient(to right, #bbd2c5, #536976);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    .book-wrapper {
+        width: 220px;
+        margin-right: 20px;
+    }
+    .book {
+        width: 200px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .book:hover{
+        transform: translateY(-5px);
+    }
+
+.bookheading{
+      background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+    .book img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }
+
+    .book-details h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .book-details p {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: black;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+    }
+
+    .rating-value {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    .stars {
+        font-size: 16px;
+        color: #ffc107;
+    }
+
+    .stars::before {
+        content: "\2605\2605\2605\2605\2605";
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        width: 80px;
+        letter-spacing: 1px;
+    }
+
+    .stars:hover::before {
+        content: "\2605\2605\2605\2605\2605";
+    }
+
+
+/* Featured Books Section */
+.featured-books {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.featured-books h2 {
+background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Cambo', serif;
+    margin-bottom: 20px;
+}
+
+/* Featured Book Container */
+.slider-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.featured-book {
+    width: 250px;
+      background: linear-gradient(to right, #bbd2c5, #536976);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.featured-book:hover {
+    transform: translateY(-5px);
+}
+
+.featured-book img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.featured-book h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.featured-book p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.featured-book .rating {
+    font-weight: bold;
+    color: #f77f00;
+}
+
+/* Slider Controls */
+.slider-controls {
+    margin-top: 20px;
+}
+
+.slider-controls button {
+    font-family: 'Cambo', serif;
+    background-color: #314755;
+    color: #ffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: #3b8d99;
+}

@@ -1,0 +1,847 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'League Spartan', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Palanquin Dark', sans-serif;
+font-family: 'Roboto Slab', serif;
+
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.featureDesc {
+  color: gray;
+  width: 50%;
+  height: 100px;
+}
+
+.product {
+  height: 100vh;
+  background-color: rgb(107, 101, 101);
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.payment {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+
+.payTitle {
+  font-size: 20px;
+  color: lightgray;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.payInput {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.payInput::placeholder {
+  color: rgb(163, 163, 163);
+}
+
+.cardIcons {
+  display: flex;
+}
+
+.cardIcon {
+  margin-right: 10px;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sm {
+  width: 30%;
+}
+
+.payButton {
+  position: absolute;
+  height: 40px;
+  bottom: -40;
+  width: 100%;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: #369e62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+
+.productImg {
+  width: 20%;
+  margin-top: 10rem;
+  margin-left: 10rem;
+
+}
+
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+.productTitle {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'Cambo', serif;
+}
+
+
+.productAuthor{
+  font-size: 17px;
+  font-family: 'Cambo', serif;
+}
+
+.productIsbn{
+font-size: 15px;
+font-family: 'Cambo', serif;
+}
+
+.productGenre{
+font-size: 15px;
+font-family: 'Cambo', serif;
+}
+
+.productPrice{
+  font-size: 15px;
+  font-family: 'Cambo', serif;
+}
+
+.productDesc {
+  font-style: 20px;
+  color: rgb(241, 234, 234);
+  line-height: 1.5rem;
+  font-family: 'Cambo', serif;
+}
+
+.colors,
+.sizes {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: rgb(255, 247, 247);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.color:last-child {
+  background-color: darkblue;
+}
+
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.productButton {
+font-family: 'Cambo',serif;
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top:10px;
+}
+
+.productButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.readButton{
+  margin-top: 12px;
+  font-family: 'Cambo',serif;
+  padding: 10px 10px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.readButton:hover{
+background-color: white;
+  color: black;
+}
+
+
+/* gallery section styles */
+
+.gallery {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.release{
+margin-bottom:-20px;
+ font-size: 30px;
+ font-family: 'Cambo', serif;
+}
+
+.galleryItem {
+  flex: 1;
+  padding: 50px;
+  background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    /* padding: 20px; */
+    width: 300px;
+}
+
+.galleryImg {
+  width: 100%;
+  height: 200px;
+}
+.galleryTitle {
+  font-family: 'Cambo', serif;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.galleryDesc {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+  font-family: 'Cambo', serif;
+}
+
+.description {
+    max-height: 80px; /* Adjust the max height as needed */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in;
+}
+.productBtn {
+font-family: 'Cambo',serif;
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top:10px;
+}
+
+.productBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.read-more-btn {
+    background-color: #CAC531;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.pay{
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 145rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+
+.payInfo {
+  font-size: 20px;
+  color: lightgray;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.payIp {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.payIp::placeholder {
+  color: rgb(163, 163, 163);
+}
+
+.CardIcons {
+  display: flex;
+}
+
+.CardIcon {
+  margin-right: 10px;
+}
+
+.CardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Sm {
+  width: 30%;
+}
+
+.payButton1 {
+  position: absolute;
+  height: 40px;
+  bottom: -40;
+  width: 100%;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: #369e62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.Close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+
+/* Style for Customer Reviews Section */
+.customer-reviews {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  font-family: 'Cambo', serif;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.customer-reviews h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.review {
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.rating {
+  margin-top: 5px;
+}
+
+.rating .star {
+  font-size: 20px;
+  color: #ffcc00;
+}
+
+.review-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Review Form */
+.review-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.review-form h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.review-form label {
+    font-weight: bold;
+}
+
+.review-form input[type="text"],
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+/* Add styling for valid and invalid email */
+input[type="text"].valid {
+    border: 1px solid #00cc00;
+}
+
+input[type="text"].invalid {
+    border: 1px solid #ff0000;
+}
+
+.review-form button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Review List */
+.review-list {
+    margin-top: 20px;
+}
+
+.review {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info p {
+    font-weight: bold;
+}
+
+.rating {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #FFD700;
+}
+
+.review-text {
+    font-size: 14px;
+}
+
+/* footer styles */
+footer {
+  display: flex;
+}
+
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.fMenuTitle {
+  font-size: 16px;
+}
+
+.fList {
+  padding: 0;
+  list-style: none;
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.footerRight {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fInput {
+  padding: 5px;
+}
+
+.fButton {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.fIcons{
+  display: flex;
+}
+
+.fIcon{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.copyright{
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* Add this code to your CSS stylesheet */
+.rating {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.star {
+  color: gold; /* Color of the stars (you can change it) */
+  font-size: 20px; /* Size of the stars (adjust as needed) */
+  margin-right: 5px; /* Spacing between stars */
+}
+
+.rating-text {
+  margin-left: 10px; /* Spacing between stars and text */
+  font-size: 16px; /* Size of the rating text (adjust as needed) */
+  color: #666; /* Text color (you can change it) */
+}
+
+@media screen and (max-width:480px) {
+  nav{
+    padding: 20px;
+  }
+
+  .search{
+    display: none;
+  }
+
+  .navBottom{
+    flex-wrap: wrap;
+  }
+
+  .menuItem{
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .slider{
+    clip-path: none;
+  }
+
+  .sliderImg{
+    width: 90%;
+  }
+
+  .sliderBg{
+    width: 100%;
+    height: 100%;
+  }
+
+  .sliderTitle{
+    display: none;
+  }
+
+  .sliderPrice{
+    top: unset;
+    bottom: -50;
+    left: 0;
+    background-color: lightgrey;
+  }
+
+  .buyButton{
+    right: 0;
+    top: 0;
+  }
+
+  .features{
+    flex-direction: column;
+  }
+
+  .product{
+    clip-path: none ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .productImg{
+    width: 80%;
+  }
+
+  .productDetails{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+  }
+
+  .productTitle{
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .gallery{
+    display: none;
+  }
+
+  .newSeason{
+    flex-direction: column;
+  }
+
+  .nsItem:nth-child(2){
+    padding: 50px;
+  }
+
+  footer{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerLeft{
+    padding: 20px;
+    width: 90%;
+  }
+
+  .footerRight{
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+
+  .payment{
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+
+
+/* Featured Books Section */
+.featured-books {
+font-family: 'Cambo', serif;
+
+    padding: 40px 0;
+    text-align: center;
+}
+
+.featured-books h2 {
+background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    font-size: 24px;
+    font-family: 'Cambo', serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Featured Book Container */
+.slider-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.featured-book {
+    width: 250px;
+      background: linear-gradient(to right, #bbd2c5, #536976);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.featured-book:hover {
+    transform: translateY(-5px);
+}
+
+.featured-book img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.featured-book h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Cambo', serif;
+}
+
+.featured-book p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+    font-family: 'Cambo', serif;
+}
+
+.featured-book .rating {
+    font-weight: bold;
+    color: #f77f00;
+    font-family: 'Cambo', serif;
+}
+
+/* Slider Controls */
+.slider-controls {
+    margin-top: 20px;
+}
+
+.slider-controls button {
+font-family: 'Cambo', serif;
+    background-color: #314755;
+    color: #ffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: #3b8d99;
+}
+
+
